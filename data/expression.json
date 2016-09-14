@@ -17,8 +17,13 @@
         },
         "surprised": {
             "image":"assets/img/surprised.jpg",
-            "description":"Face with rounded, very open eyes, raised eyebrows, and a rounded, open mouth.",
-            "tag": ["extreme"]
+            "description":"Face with rounded, very open eyes, raised eyebrows, and a rounded, open mouth",
+            "tag": ["dramatic"]
+        },
+        "laughing": {
+            "image":"assets/img/laughing.jpg",
+            "description":"Face with closed eyesa nd a big smile with their mouth open",
+            "tag": ["dramatic", "positive"]
         }
     }
 }

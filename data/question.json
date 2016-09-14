@@ -13,6 +13,13 @@
             "answer": "angry",
             "difficulty": "easy",
             "type":["which"]
+        },
+        {
+            "question":"Who just heard a really funny joke?",
+            "expression": ["happy","laughing"],
+            "answer": "laughing",
+            "difficulty": "intermediate",
+            "type":["who"]
         }
     ]
 }

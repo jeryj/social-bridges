@@ -1,3 +1,4 @@
+<?php require_once('config.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 <header role='banner'>
-    <h2><a href='/'>Social Bridges</a></h2>
+    <h2><a href='index.php'>Social Bridges</a></h2>
 </header>
 <main>
     <h1>Assess Social Comrehension</h1>

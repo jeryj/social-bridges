@@ -5,6 +5,7 @@
     error_reporting(E_ALL);
 
     header('Content-type: text/html; charset=utf-8');
+    require_once('config.php');
     require_once('includes/class-Assessment.php');
 
     // start the assessment
@@ -21,7 +22,7 @@
 </head>
 <body>
 <header role='banner'>
-    <h2><a href='/'>Social Bridges</a></h2>
+    <h2><a href='index.php'>Social Bridges</a></h2>
 </header>
 <main>
     <?php

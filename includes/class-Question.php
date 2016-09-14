@@ -3,7 +3,9 @@
 class Question {
     public $question,
            $answer,
-           $expression = array();
+           $expression = array(),
+           $difficulty,
+           $type = array();
 
     public function __construct($question_number) {
         if(0 <= (int) $question_number && (int) $question_number <= 10) {
@@ -21,10 +23,12 @@ class Question {
         $this->answer = $question['answer'];
         $this->expression[] = $question['expression'][0];
         $this->expression[] = $question['expression'][1];
+        $this->difficulty = $question['difficulty'];
+        $this->type = $question['type'];
     }
 
     protected function get_question_data() {
-        $question_json = file_get_contents("data/question.json");
+        $question_json = file_get_contents(ROOT_PATH."/data/question.json");
         $question_data = json_decode($question_json, true);
         return $question_data['question'];
     }
@@ -39,6 +43,14 @@ class Question {
 
     public function get_answer() {
         return $this->answer;
+    }
+
+    public function get_difficulty() {
+        return $this->difficulty;
+    }
+
+    public function get_type() {
+        return $this->type;
     }
 }
 
