@@ -5,12 +5,10 @@
     error_reporting(E_ALL);
 
     header('Content-type: text/html; charset=utf-8');
-    // required files
-    require_once('includes/class-Question.php');
-    require_once('includes/class-Expression.php');
+    require_once('includes/class-Assessment.php');
 
-    // set the question
-    $question = new Question(0);
+    // start the assessment
+    $assessment = new Assessment();
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,21 +24,14 @@
     <h2><a href='/'>Social Bridges</a></h2>
 </header>
 <main>
-    <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
-        <fieldset>
-            <legend><?php echo $question->get_question();?></legend>
-            <?php $expressions = $question->get_expression();
-            foreach($expressions as $expression) {
-                $expression = new Expression($expression);?>
-                <label>
-                    <input type="radio" name="facial_expression" value="<?php echo $expression->get_name();?>" />
-                    <?php echo $expression->get_description();?>
-                </label>
-            <?php } ?>
-        </fieldset>
-        <button>Submit</button>
-    </form>
-    <!-- about the app and how to use it -->
+    <?php
+    $state = $assessment->get_state();
+    if($state === 'question') {
+        include('views/question.php');
+    } else {
+        include ('views/results.php');
+    }?>
+
 </main>
 <footer></footer>
 </body>
