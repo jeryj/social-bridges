@@ -1,0 +1,24 @@
+{"expression":
+    {
+        "happy": {
+            "image":"assets/img/happy.jpg",
+            "description":"Face with upturned mouth",
+            "tag": ["positive"]
+        },
+        "sad": {
+            "image":"assets/img/sad.jpg",
+            "description":"Face with downturned mouth",
+            "tag": ["negative"]
+        },
+        "angry": {
+            "image":"assets/img/angry.jpg",
+            "description":"Face with slanted eyebrows, flared nostrils, and pursed mouth",
+            "tag": ["negative"]
+        },
+        "surprised": {
+            "image":"assets/img/surprised.jpg",
+            "description":"Face with rounded, very open eyes, raised eyebrows, and a rounded, open mouth.",
+            "tag": ["extreme"]
+        }
+    }
+}

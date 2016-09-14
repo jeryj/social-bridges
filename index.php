@@ -4,32 +4,18 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges</title>
-
-    <link rel='stylesheet' href='/dist/style.css' />
-    <script type='text/javascript' src='/dist/scripts.js'></script>
+    <link rel='stylesheet' href='dist/css/styles.min.css' />
+    <script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </head>
-
 <body>
-
 <header role='banner'>
-    <h1><a href='/'>Social Bridges</a></h1>
-    <nav role='navigation'>
-        <ul>
-            <li><a href='#location'>Start Assessment</a></li>
-        </ul>
-    </nav>
+    <h2><a href='/'>Social Bridges</a></h2>
 </header>
-
 <main>
-    <div class='hero'>
-        <h2>About this?</h2>
-    </div>
+    <h1>Assess Social Comrehension</h1>
+    <p><a href='assessment.php'>Start Assessment</a></p>
+    <!-- about the app and how to use it -->
 </main>
-
-
-<footer>
-
-</footer>
-
+<footer></footer>
 </body>
 </html>

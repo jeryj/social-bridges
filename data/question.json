@@ -1,0 +1,18 @@
+{"question":
+    [
+        {
+            "question":"Which face is happy?",
+            "expression": ["happy","sad"],
+            "answer": "happy",
+            "difficulty": "easy",
+            "type":["which"]
+        },
+        {
+            "question":"Which face is angry?",
+            "expression": ["happy","angry"],
+            "answer": "angry",
+            "difficulty": "easy",
+            "type":["which"]
+        }
+    ]
+}
