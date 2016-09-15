@@ -1,11 +1,12 @@
-<div class="progressbar"
-    role="progressbar"
-    aria-valuemin="1"
-    aria-valuenow="<?php echo ($assessment->get_current_question_number() + 1);?>"
-    aria-valuemax="<?php echo $assessment->get_total_questions();?>">
-    Question <?php echo ($assessment->get_current_question_number() + 1);?> of <?php echo $assessment->get_total_questions();?>
-</div>
+
 <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+    <div class="progressbar"
+        role="progressbar"
+        aria-valuemin="1"
+        aria-valuenow="<?php echo ($assessment->get_current_question_number() + 1);?>"
+        aria-valuemax="<?php echo $assessment->get_total_questions();?>">
+        Question <?php echo ($assessment->get_current_question_number() + 1);?> of <?php echo $assessment->get_total_questions();?>
+    </div>
     <?php
     // output errors, if any
     $assessment->get_error_messages();?>

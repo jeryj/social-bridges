@@ -1,28 +1,33 @@
 {"expression":
     {
         "happy": {
-            "image":"assets/img/happy.jpg",
+            "image":"happy.jpg",
             "description":"Face with upturned mouth",
             "tag": ["positive"]
         },
         "sad": {
-            "image":"assets/img/sad.jpg",
+            "image":"sad.jpg",
             "description":"Face with downturned mouth",
             "tag": ["negative"]
         },
         "angry": {
-            "image":"assets/img/angry.jpg",
+            "image":"angry.jpg",
             "description":"Face with slanted eyebrows, flared nostrils, and pursed mouth",
             "tag": ["negative"]
         },
         "surprised": {
-            "image":"assets/img/surprised.jpg",
+            "image":"surprised.jpg",
             "description":"Face with rounded, very open eyes, raised eyebrows, and a rounded, open mouth",
             "tag": ["dramatic"]
         },
         "laughing": {
-            "image":"assets/img/laughing.jpg",
-            "description":"Face with closed eyesa nd a big smile with their mouth open",
+            "image":"laughing.jpg",
+            "description":"Face with closed eyes and a big smile with their mouth open",
+            "tag": ["dramatic", "positive"]
+        },
+        "neutral": {
+            "image":"neutral.jpg",
+            "description":"Face with eyes open normally, staring straight ahead. Mouth straight and facial muscles relaxed.",
             "tag": ["dramatic", "positive"]
         }
     }

@@ -25,7 +25,7 @@ class Expression {
     }
 
     protected function get_expression_data() {
-        $expression_json = file_get_contents(ROOT_PATH."/data/expression.json");
+        $expression_json = file_get_contents(ROOT_DIR."/data/expression.json");
         $expression_data = json_decode($expression_json, true);
         return $expression_data['expression'];
     }

@@ -28,7 +28,7 @@ class Question {
     }
 
     protected function get_question_data() {
-        $question_json = file_get_contents(ROOT_PATH."/data/question.json");
+        $question_json = file_get_contents(ROOT_DIR."/data/question.json");
         $question_data = json_decode($question_json, true);
         return $question_data['question'];
     }

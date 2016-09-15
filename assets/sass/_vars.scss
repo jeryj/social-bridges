@@ -1,0 +1,17 @@
+// colors
+$blue: #125B68;
+$light_blue: #e9f3f0;
+$green: #02906b;
+// $salmon: #e85f5f;
+$salmon: #CD4242;
+$link: $green;
+
+// easing function
+$fastInEaseOut: cubic-bezier(0.000, 0, .3, 1);
+
+%focus--glow {
+    outline-color: lighten($salmon, 10);
+    outline-offset: 1px;
+    outline-style: auto;
+    outline-width: 3px;
+}

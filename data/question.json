@@ -2,9 +2,9 @@
     [
         {
             "question":"Which face is happy?",
-            "expression": ["happy","sad"],
+            "expression": ["happy","angry"],
             "answer": "happy",
-            "difficulty": "easy",
+            "difficulty": "intermediate",
             "type":["which"]
         },
         {
@@ -15,9 +15,9 @@
             "type":["which"]
         },
         {
-            "question":"Who just heard a really funny joke?",
-            "expression": ["happy","laughing"],
-            "answer": "laughing",
+            "question":"Who just heard a funny joke?",
+            "expression": ["happy","neutral"],
+            "answer": "happy",
             "difficulty": "intermediate",
             "type":["who"]
         }

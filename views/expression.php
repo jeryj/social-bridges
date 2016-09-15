@@ -1,4 +1,4 @@
-<label class="expression">
+<label class="exp">
     <input type="radio" name="expression" value="<?php echo $expression->get_name();?>" />
-    <?php echo $expression->get_description();?>
+    <img class="face" src="dist/img/<?php echo $expression->get_image();?>" alt="<?php echo $expression->get_description();?>" />
 </label>
