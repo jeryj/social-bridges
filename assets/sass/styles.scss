@@ -5,6 +5,31 @@ html {
     box-sizing: border-box;
 }
 
+header {
+    max-width: 10em;
+    margin: 0 auto;
+
+    svg {
+        margin: 0;
+        height: 1.6em;
+        width: 90%;
+        fill: #425650;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+a {
+    color: $salmon;
+
+    &:hover,
+    &:focus {
+        color: darken($salmon, 10);
+    }
+}
+
 body {
     background: $light_blue;
     padding: 20px;
@@ -100,5 +125,7 @@ button {
 
 .progressbar {
     position: relative;
-    top: 1.2em;
+    top: 1.6em;
+    border-bottom: 3px solid $green;
+    font-size: 0.875em;
 }

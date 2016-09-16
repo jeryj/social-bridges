@@ -21,9 +21,7 @@
     <script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </head>
 <body>
-<header role='banner'>
-    <h2><a href='index.php'>Social Bridges</a></h2>
-</header>
+<?php include('views/header.php');?>
 <main>
     <?php
     $state = $assessment->get_state();

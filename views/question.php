@@ -4,8 +4,9 @@
         role="progressbar"
         aria-valuemin="1"
         aria-valuenow="<?php echo ($assessment->get_current_question_number() + 1);?>"
-        aria-valuemax="<?php echo $assessment->get_total_questions();?>">
-        Question <?php echo ($assessment->get_current_question_number() + 1);?> of <?php echo $assessment->get_total_questions();?>
+        aria-valuemax="<?php echo $assessment->get_total_questions();?>"
+        style="width:<?php echo (($assessment->get_current_question_number() + 1)/$assessment->get_total_questions())*100;?>%">
+        <?php echo ($assessment->get_current_question_number() + 1);?>/<?php echo $assessment->get_total_questions();?>
     </div>
     <?php
     // output errors, if any

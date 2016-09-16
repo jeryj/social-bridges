@@ -8,9 +8,7 @@
     <script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </head>
 <body>
-<header role='banner'>
-    <h2><a href='index.php'>Social Bridges</a></h2>
-</header>
+<?php include('views/header.php');?>
 <main>
     <h1>Assess Social Comrehension</h1>
     <p><a href='assessment.php'>Start Assessment</a></p>
