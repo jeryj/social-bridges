@@ -18,7 +18,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges Assessment</title>
     <link rel='stylesheet' href='dist/css/styles.min.css' />
-    <script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </head>
 <body>
 <?php include('views/header.php');?>
@@ -33,5 +32,6 @@
 
 </main>
 <footer></footer>
+<script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </body>
 </html>

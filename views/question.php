@@ -3,7 +3,7 @@
 // output errors, if any
 $assessment->get_error_messages();?>
 
-<form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+<form id="assessment" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
     <div class="progressbar"
         role="progressbar"
         aria-valuemin="1"
@@ -19,15 +19,15 @@ $assessment->get_error_messages();?>
     <input type="hidden" name="hard_answered_correctly" value="<?php echo $assessment->get_answered_correctly('hard');?>"/>
     <input type="hidden" name="who_answered_correctly" value="<?php echo $assessment->get_answered_correctly('who');?>"/>
     <input type="hidden" name="which_answered_correctly" value="<?php echo $assessment->get_answered_correctly('which');?>"/>
-    <input type="hidden" name="current_question_number" value="<?php echo $assessment->get_current_question_number();?>"/>
+    <input type="hidden" id="q_id" name="current_question_number" value="<?php echo $assessment->get_current_question_number();?>"/>
 
     <?php
         // get the question
         $question_number = $assessment->get_current_question_number();
         $question = new Question($question_number);
     ?>
-    <fieldset>
-        <legend id="question"><?php echo $question->get_question();?></legend>
+    <fieldset id="question">
+        <legend><?php echo $question->get_question();?></legend>
 
         <?php $expressions = $question->get_expression();
         foreach($expressions as $expression) {
@@ -35,5 +35,6 @@ $assessment->get_error_messages();?>
             include('views/expression.php');
         } ?>
     </fieldset>
-    <button>Submit</button>
+    <button id="submit">Submit</button>
+    <div id="test"></div>
 </form>

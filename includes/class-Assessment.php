@@ -20,8 +20,27 @@ class Assessment {
     public function __construct() {
         $this->init();
         // see if we've posted form submission
+
         if(isset($_POST) && !empty($_POST)) {
             $this->process_submit();
+
+            if(isset($_POST['ajax']) && $_POST['ajax'] == true) {
+                $json = (array) $this;
+                // append the next question info
+                $question = new Question($this->current_question_number);
+                $expressions = array();
+                foreach($question->expression as $exp) {
+                    $exp = new Expression($exp);
+                    $expressions[] = (array) $exp;
+                }
+                $question = (array) $question;
+                // replace the expressions with the full object
+                $question['expression'] = $expressions;
+
+                $json['question'] = $question;
+                echo json_encode($json);
+                die;
+            }
         }
     }
 
@@ -137,7 +156,7 @@ class Assessment {
     public function get_error_messages() {
 		if(isset($this->error) && !empty($this->error)) {
 	        $errors = $this->error;
-	        echo '<section class="message message--error" role="alertdialog"  aria-labelledby="message__title" aria-describedby="enp-message__list">
+	        echo '<section class="message message--error" role="alertdialog" aria-labelledby="message__title" aria-describedby="enp-message__list">
 	        <h3 class="message__title message__title--error">Error</h3>
 	        <ul class="enp-message__list">';
 	        foreach($errors as $error) {
