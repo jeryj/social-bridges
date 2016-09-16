@@ -1,4 +1,8 @@
 
+<?php
+// output errors, if any
+$assessment->get_error_messages();?>
+
 <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
     <div class="progressbar"
         role="progressbar"
@@ -8,9 +12,7 @@
         style="width:<?php echo (($assessment->get_current_question_number() + 1)/$assessment->get_total_questions())*100;?>%">
         <?php echo ($assessment->get_current_question_number() + 1);?>/<?php echo $assessment->get_total_questions();?>
     </div>
-    <?php
-    // output errors, if any
-    $assessment->get_error_messages();?>
+
     <input type="hidden" name="answered_correctly" value="<?php echo $assessment->get_answered_correctly();?>"/>
     <input type="hidden" name="easy_answered_correctly" value="<?php echo $assessment->get_answered_correctly('easy');?>"/>
     <input type="hidden" name="intermediate_answered_correctly" value="<?php echo $assessment->get_answered_correctly('intermediate');?>"/>

@@ -6,8 +6,7 @@ html {
 }
 
 header {
-    max-width: 10em;
-    margin: 0 auto;
+    text-align: center;
 
     svg {
         margin: 0;
@@ -46,6 +45,9 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 0 1.6em;
 }
 
+form {
+    position: relative;
+}
 
 fieldset {
     border: none;
@@ -59,6 +61,7 @@ fieldset {
 legend {
     text-align: center;
     font-size: 1.6em;
+    line-height: 1.2;
     position: relative;
     top: 1.6em;
     box-sizing: border-box; /* IE9-11 & Edge 12-13 */
@@ -86,11 +89,14 @@ legend {
 }
 
 .exp {
-    display: inline-block;
-    margin: 0 0 1em;
+    margin: 0 0 0.6em;
 
-    &:first-of-type {
-        margin-right: 1em;
+    @media (min-width: 450px) {
+        display: inline-block;
+
+        &:first-of-type {
+            margin-right: 1em;
+        }
     }
 }
 
@@ -124,8 +130,12 @@ button {
 }
 
 .progressbar {
-    position: relative;
-    top: 1.6em;
+    position: absolute;;
+    top: -0.5em;
     border-bottom: 3px solid $green;
     font-size: 0.875em;
+}
+
+.message__title {
+    color: $salmon;
 }

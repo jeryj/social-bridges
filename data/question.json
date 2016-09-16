@@ -4,7 +4,7 @@
             "question":"Which face is happy?",
             "expression": ["happy","angry"],
             "answer": "happy",
-            "difficulty": "intermediate",
+            "difficulty": "easy",
             "type":["which"]
         },
         {
