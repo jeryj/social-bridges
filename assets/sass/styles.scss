@@ -129,11 +129,12 @@ button {
     }
 }
 
-.progressbar {
+#progressbar {
     position: absolute;;
     top: -0.5em;
     border-bottom: 3px solid $green;
     font-size: 0.875em;
+    transition: all .4s $fastInEaseOut;
 }
 
 .message__title {

@@ -4,22 +4,23 @@
 $assessment->get_error_messages();?>
 
 <form id="assessment" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
-    <div class="progressbar"
+    <div id="progressbar"
         role="progressbar"
         aria-valuemin="1"
         aria-valuenow="<?php echo ($assessment->get_current_question_number() + 1);?>"
         aria-valuemax="<?php echo $assessment->get_total_questions();?>"
         style="width:<?php echo (($assessment->get_current_question_number() + 1)/$assessment->get_total_questions())*100;?>%">
-        <?php echo ($assessment->get_current_question_number() + 1);?>/<?php echo $assessment->get_total_questions();?>
+        <span id="progress__cqn"><?php echo ($assessment->get_current_question_number() + 1);?></span>/<?php echo $assessment->get_total_questions();?>
     </div>
 
-    <input type="hidden" name="answered_correctly" value="<?php echo $assessment->get_answered_correctly();?>"/>
-    <input type="hidden" name="easy_answered_correctly" value="<?php echo $assessment->get_answered_correctly('easy');?>"/>
-    <input type="hidden" name="intermediate_answered_correctly" value="<?php echo $assessment->get_answered_correctly('intermediate');?>"/>
-    <input type="hidden" name="hard_answered_correctly" value="<?php echo $assessment->get_answered_correctly('hard');?>"/>
-    <input type="hidden" name="who_answered_correctly" value="<?php echo $assessment->get_answered_correctly('who');?>"/>
-    <input type="hidden" name="which_answered_correctly" value="<?php echo $assessment->get_answered_correctly('which');?>"/>
-    <input type="hidden" id="q_id" name="current_question_number" value="<?php echo $assessment->get_current_question_number();?>"/>
+    <input id="tq" type="hidden" name="total_questions" value="<?php echo $assessment->get_total_questions();?>"/>
+    <input id="ac" type="hidden" name="answered_correctly" value="<?php echo $assessment->get_answered_correctly();?>"/>
+    <input id="e_ac" type="hidden" name="easy_answered_correctly" value="<?php echo $assessment->get_answered_correctly('easy');?>"/>
+    <input id="i_ac" type="hidden" name="intermediate_answered_correctly" value="<?php echo $assessment->get_answered_correctly('intermediate');?>"/>
+    <input id="h_ac" type="hidden" name="hard_answered_correctly" value="<?php echo $assessment->get_answered_correctly('hard');?>"/>
+    <input id="who_ac" type="hidden" name="who_answered_correctly" value="<?php echo $assessment->get_answered_correctly('who');?>"/>
+    <input id="which_ac" type="hidden" name="which_answered_correctly" value="<?php echo $assessment->get_answered_correctly('which');?>"/>
+    <input id="q_id" type="hidden" name="current_question_number" value="<?php echo $assessment->get_current_question_number();?>"/>
 
     <?php
         // get the question
@@ -36,5 +37,4 @@ $assessment->get_error_messages();?>
         } ?>
     </fieldset>
     <button id="submit">Submit</button>
-    <div id="test"></div>
 </form>
