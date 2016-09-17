@@ -33,7 +33,7 @@
 </main>
 <footer></footer>
 <?php if($state === 'question') { ?>
-    <script type='text/javascript' src='dist/js/scripts.js'></script>
+    <script type='text/javascript' src='dist/js/scripts.min.js'></script>
 <?php } ?>
 </body>
 </html>
