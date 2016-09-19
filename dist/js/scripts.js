@@ -98,20 +98,22 @@ function currentQuestion() {
 // hide the submit button
 btn.className = 'hidden';
 
-question.addEventListener('click', nextQuestionListener);
-question.addEventListener('keydown', nextQuestionListener);
+question.addEventListener('mousedown', nextQuestionMouseDownListener);
+question.addEventListener('keydown', nextQuestionKeyDownListener);
 
-function nextQuestionListener(e) {
+function nextQuestionKeyDownListener(e) {
 
-
-    if (!e.target || !e.target.matches("input.exp_input")) {
+    if (!e.target || e.target.className !== 'exp_input') {
         return false;
     }
+
     // detect keypress vs click
     var x = e.x || e.clientX;
     var y = e.y || e.clientY;
+
     // keypress on enter!
     if (!x && !y) {
+        console.log(e.keyCode);
         // keypress, so let's check the code
         if(e.keyCode === 13) {
             // check if this input has a selected state
@@ -123,7 +125,41 @@ function nextQuestionListener(e) {
         }
 
    } else {
-       // mouse click (or touch), so send them on
-       nextState(e);
+       return false;
    }
+}
+
+
+function nextQuestionMouseDownListener(e) {
+    // check to see if we're on a child element of the label or the label itself
+    if(e.target.parentNode.className !== 'exp' && e.target.className !== 'exp' ) {
+        return false;
+    }
+
+    var exp_input;
+
+    // we're clear, now we just need to check and submit
+    // let's find the input
+    if(e.target.className === 'face') {
+        // get the first child (the input) of the parentElement
+        exp_input = e.target.parentElement.children[0];
+    } else if(e.target.className === 'enp_input') {
+        // it's what it is!
+        exp_input = e.target;
+    } else if(e.target.className === 'exp') {
+        // get the first childNode (the input)
+        exp_input = e.target.children[0];
+    } else {
+        // ???
+        // what did you click?
+        console.log('what got clicked?');
+        return false;
+    }
+
+    // make sure our input is selected
+    if(exp_input.checked !== true) {
+        exp_input.checked = true;
+    }
+    // move on!
+    nextState(e);
 }
