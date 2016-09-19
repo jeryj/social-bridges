@@ -74,22 +74,25 @@ legend {
 .face {
     padding: 1.6em 2.8em;
     background: #fff;
-    border: 4px solid #ddd;
+    border: 4px solid #eee;
     border-radius: 50%;
+    margin-bottom: 0;
     transition: all .125s $fastInEaseOut;
+}
 
+.exp {
     &:hover,
     &:focus {
-        border-color: #bbb;
+        .face {
+            border-color: #bbb;
+        }
     }
 
     &:hover {
         cursor: pointer;
     }
-}
 
-.exp {
-    margin: 0 0 0.6em;
+    margin: 0 0 1.6em;
 
     @media (min-width: 450px) {
         display: inline-block;
@@ -105,8 +108,16 @@ legend {
     z-index: -1;
     opacity: 0;
 
+    &:focus + .face {
+        border-color: #aaa;
+    }
+
     &:checked + .face {
         border-color: $salmon;
+    }
+
+    &:focus:checked + .face {
+        border-color: #425650;
     }
 }
 
@@ -126,6 +137,12 @@ button {
     &:hover,
     &:focus {
         background: darken($salmon, 8);
+    }
+
+    &.hidden {
+        opacity: 0;
+        height: 0;
+        padding: 0;
     }
 }
 

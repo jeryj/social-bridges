@@ -1,5 +1,9 @@
-var btn = document.getElementById('submit');
-
+var btn = document.getElementById('btn--submit');
+var form = document.getElementById("assessment");
+var question = document.getElementById("question");
+var progressCqn = document.getElementById('progress__cqn');
+var progressBar = document.getElementById('progressbar');
+var totalQuestions = parseInt(document.getElementById('tq').value);
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
@@ -25,14 +29,8 @@ request.onreadystatechange = function() {
 };
 
 function new_question(json) {
-    // get the question
-    var question = document.getElementById("question");
-    // destroy the original question
-    question.parentNode.removeChild(question);
-    // create the new html
-    var question_HTML = questionHTML(json.question);
-    // insert it
-    btn.insertAdjacentHTML('beforebegin', question_HTML);
+    // destroy the original innerHTML and replaces it with our new HTML
+    question.innerHTML = questionHTML(json.question);
 }
 
 function append_error(message) {
@@ -40,37 +38,31 @@ function append_error(message) {
     btn.insertAdjacentHTML('afterend', messageHTML);
 }
 
-btn.addEventListener('click', function(e) {
-
-    var current_question_number = parseInt(document.getElementById('q_id').value) + 1;
-    var total_questions = parseInt(document.getElementById('tq').value);
-    // get the question they're answering
-    var form = document.getElementById("assessment");
-    if(current_question_number !== total_questions) {
+function nextState(e) {
+    if(currentQuestion() !== totalQuestions) {
         e.preventDefault();
         formData = new FormData(form);
         formData.append("ajax", true);
         request.open("POST", form.action);
         request.send(formData);
+        // move focus to the question
+        question.focus();
     } else {
-        // submit as normal
-        console.log('submit?');
+        // we're on the final question, so trigger a click
+        // on our button to send us to the results page
+        btn.click();
     }
-
-});
-
+}
 
 function questionHTML(question) {
-    var questionHTML = '<fieldset id="question"><legend>'+question.question+'</legend>';
+    var questionHTML = '<legend>'+question.question+'</legend>';
     questionHTML += expressionHTML(question.expression[0]) + expressionHTML(question.expression[1]);
-    questionHTML += '</fieldset>';
 
     return questionHTML;
-
 }
 
 function expressionHTML(expression) {
-    return '<label class="exp"><input type="radio" name="expression" value="'+expression.name+'" /><img class="face" src="dist/img/'+expression.image+'" alt="'+expression.description+'" /></label>';
+    return '<label class="exp"><input class="exp_input" type="radio" name="expression" value="'+expression.name+'" /><img class="face" src="dist/img/'+expression.image+'" alt="'+expression.description+'" /></label>';
 }
 
 function updateValues(json) {
@@ -81,7 +73,6 @@ function updateValues(json) {
     updateValue('who_ac', json.who_answered_correctly);
     updateValue('which_ac', json.which_answered_correctly);
     updateValue('q_id', json.current_question_number);
-
 }
 
 function updateValue(id, val) {
@@ -90,16 +81,49 @@ function updateValue(id, val) {
 }
 
 function updateProgressbar() {
-    // could put this in a function
-    var current_question_number = parseInt(document.getElementById('q_id').value) + 1;
-    var total_questions = parseInt(document.getElementById('tq').value);
-    // end could put this in a function
 
-    var progressCqn = document.getElementById('progress__cqn');
     // update the text node
-    progressCqn.innerText = current_question_number;
+    progressCqn.innerText = currentQuestion();
     // update the width
-    document.getElementById('progressbar').style.width = (current_question_number / total_questions) * 100 +'%';
+    progressBar.style.width = (currentQuestion() / totalQuestions) * 100 +'%';
 
 
+}
+
+// return current question number
+function currentQuestion() {
+    return parseInt(document.getElementById('q_id').value) + 1;
+}
+
+// hide the submit button
+btn.className = 'hidden';
+
+question.addEventListener('click', nextQuestionListener);
+question.addEventListener('keydown', nextQuestionListener);
+
+function nextQuestionListener(e) {
+
+
+    if (!e.target || !e.target.matches("input.exp_input")) {
+        return false;
+    }
+    // detect keypress vs click
+    var x = e.x || e.clientX;
+    var y = e.y || e.clientY;
+    // keypress on enter!
+    if (!x && !y) {
+        // keypress, so let's check the code
+        if(e.keyCode === 13) {
+            // check if this input has a selected state
+            // if it doesn't, select it!
+            if(e.target.checked !== true) {
+                e.target.checked = true;
+            }
+            nextState(e);
+        }
+
+   } else {
+       // mouse click (or touch), so send them on
+       nextState(e);
+   }
 }
