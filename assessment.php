@@ -21,7 +21,7 @@
 </head>
 <body>
 <?php include('views/header.php');?>
-<main>
+<main aria-live="polite" aria-relevant="additions text">
     <?php
     $state = $assessment->get_state();
     if($state === 'question') {

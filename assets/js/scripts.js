@@ -29,8 +29,18 @@ request.onreadystatechange = function() {
 };
 
 function new_question(json) {
+    // add a class to the question and wait
+    question.className = 'q-remove';
+    setTimeout(removeQuestionClass, 500);
     // destroy the original innerHTML and replaces it with our new HTML
     question.innerHTML = questionHTML(json.question);
+    // move focus to the question
+    question.parentElement.focus();
+}
+
+function removeQuestionClass() {
+    // remove the question animation class
+    question.className = '';
 }
 
 function append_error(message) {
@@ -45,8 +55,6 @@ function nextState(e) {
         formData.append("ajax", true);
         request.open("POST", form.action);
         request.send(formData);
-        // move focus to the question
-        question.focus();
     } else {
         // we're on the final question, so trigger a click
         // on our button to send us to the results page
@@ -62,7 +70,7 @@ function questionHTML(question) {
 }
 
 function expressionHTML(expression) {
-    return '<label class="exp"><input class="exp_input" type="radio" name="expression" value="'+expression.name+'" /><img class="face" src="dist/img/'+expression.image+'" alt="'+expression.description+'" /></label>';
+    return '<label class="exp"><input class="exp_input" type="radio" name="expression" value="'+expression.name+'" /><img class="face" src="dist/img/'+expression.image+'" alt="" /><span class="sr">'+expression.description+'</span></label>';
 }
 
 function updateValues(json) {
@@ -81,12 +89,13 @@ function updateValue(id, val) {
 }
 
 function updateProgressbar() {
-
+    var cqn = currentQuestion();
     // update the text node
-    progressCqn.innerText = currentQuestion();
+    progressCqn.innerText = cqn;
     // update the width
     progressBar.style.width = (currentQuestion() / totalQuestions) * 100 +'%';
-
+    // update the valuenow attr
+    progressBar.setAttribute('aria-valuenow', cqn);
 
 }
 
@@ -98,7 +107,7 @@ function currentQuestion() {
 // hide the submit button
 btn.className = 'hidden';
 
-question.addEventListener('mousedown', nextQuestionMouseDownListener);
+question.addEventListener('mouseup', nextQuestionMouseDownListener);
 question.addEventListener('keydown', nextQuestionKeyDownListener);
 
 function nextQuestionKeyDownListener(e) {

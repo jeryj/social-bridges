@@ -8,11 +8,12 @@ $salmon: #CD4242;
 $link: $green;
 
 // easing function
+$quad: cubic-bezier(0.43, 0.02, 0.54, 0.98);
 $fastInEaseOut: cubic-bezier(0.000, 0, .3, 1);
 
 %focus--glow {
-    outline-color: lighten($salmon, 10);
-    outline-offset: 1px;
+    outline-color: #888;
+    outline-offset: 5px;
     outline-style: auto;
     outline-width: 3px;
 }

@@ -10,7 +10,8 @@ $assessment->get_error_messages();?>
         aria-valuenow="<?php echo ($assessment->get_current_question_number() + 1);?>"
         aria-valuemax="<?php echo $assessment->get_total_questions();?>"
         style="width:<?php echo (($assessment->get_current_question_number() + 1)/$assessment->get_total_questions())*100;?>%">
-        <span id="progress__cqn"><?php echo ($assessment->get_current_question_number() + 1);?></span>/<?php echo $assessment->get_total_questions();?>
+        <span class="sr">Question </span>
+        <span id="progress__cqn"><?php echo ($assessment->get_current_question_number() + 1);?></span> of <?php echo $assessment->get_total_questions();?>
     </div>
 
     <input id="tq" type="hidden" name="total_questions" value="<?php echo $assessment->get_total_questions();?>"/>
@@ -27,14 +28,19 @@ $assessment->get_error_messages();?>
         $question_number = $assessment->get_current_question_number();
         $question = new Question($question_number);
     ?>
-    <fieldset id="question" tabindex="-1">
-        <legend><?php echo $question->get_question();?></legend>
+    <div id="question-container" tabindex="-1">
+        <fieldset id="question">
 
-        <?php $expressions = $question->get_expression();
-        foreach($expressions as $expression) {
-            $expression = new Expression($expression);
-            include('views/expression.php');
-        } ?>
-    </fieldset>
+                <legend><?php echo $question->get_question();?></legend>
+
+                <?php $expressions = $question->get_expression();
+                foreach($expressions as $expression) {
+                    $expression = new Expression($expression);
+                    include('views/expression.php');
+                } ?>
+
+            </div>
+        </fieldset>
+    </div>
     <button id="btn--submit">Submit</button>
 </form>
