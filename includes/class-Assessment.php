@@ -151,5 +151,20 @@ class Assessment {
 		}
 	}
 
+    public function percentagize($part, $total) {
+        return (int) round(($part / $total) * 100);
+    }
+
+    public function get_score_circle_dashoffset($score) {
+		$dashoffset = 0;
+		if(!empty($score)) {
+			// calculate the score dashoffset
+            $r = 90;
+            $c = M_PI*($r*2);
+            $dashoffset = ((100-$score)/100)*$c;
+		}
+		return $dashoffset;
+	}
+
 }
 ?>

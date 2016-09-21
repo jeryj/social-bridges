@@ -21,7 +21,7 @@
 </head>
 <body>
 <?php include('views/header.php');?>
-<main aria-live="polite" aria-relevant="additions text">
+<main aria-live="polite" aria-relevant="additions text" class="container">
     <?php
     $state = $assessment->get_state();
     if($state === 'question') {
@@ -34,6 +34,8 @@
 <footer></footer>
 <?php if($state === 'question') { ?>
     <script type='text/javascript' src='dist/js/scripts.min.js'></script>
+<?php } else {?>
+    <script type='text/javascript' src='assets/js/results.js'></script>
 <?php } ?>
 </body>
 </html>
