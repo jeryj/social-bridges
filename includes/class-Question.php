@@ -4,7 +4,6 @@ class Question {
     public $question,
            $answer,
            $expression = array(),
-           $difficulty,
            $type = array();
 
     public function __construct($question_number) {
@@ -23,7 +22,6 @@ class Question {
         $this->answer = $question['answer'];
         $this->expression[] = $question['expression'][0];
         $this->expression[] = $question['expression'][1];
-        $this->difficulty = $question['difficulty'];
         $this->type = $question['type'];
     }
 
@@ -43,10 +41,6 @@ class Question {
 
     public function get_answer() {
         return $this->answer;
-    }
-
-    public function get_difficulty() {
-        return $this->difficulty;
     }
 
     public function get_type() {

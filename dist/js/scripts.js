@@ -75,11 +75,8 @@ function expressionHTML(expression) {
 
 function updateValues(json) {
     updateValue('ac', json.answered_correctly);
-    updateValue('e_ac', json.easy_answered_correctly);
-    updateValue('i_ac', json.intermediate_answered_correctly);
-    updateValue('h_ac', json.hard_answered_correctly);
-    updateValue('who_ac', json.who_answered_correctly);
-    updateValue('which_ac', json.which_answered_correctly);
+    updateValue('phrase_ac', json.phrase_answered_correctly);
+    updateValue('application_ac', json.application_answered_correctly);
     updateValue('q_id', json.current_question_number);
 }
 

@@ -1,25 +1,65 @@
 {"question":
     [
         {
-            "question":"Which face is happy?",
-            "expression": ["happy","angry"],
-            "answer": "happy",
-            "difficulty": "easy",
-            "type":["which"]
+            "question":"Who is distracted?",
+            "expression": ["distracted","happy"],
+            "answer": "distracted",
+            "type":["phrase"]
         },
         {
-            "question":"Which face is angry?",
+            "question":"Who is angry?",
+            "expression": ["sad","angry"],
+            "answer": "angry",
+            "type":["phrase"]
+        },
+        {
+            "question":"Who is sad?",
+            "expression": ["sad","scared"],
+            "answer": "sad",
+            "type":["phrase"]
+        },
+        {
+            "question":"Who is happy?",
+            "expression": ["happy","distracted"],
+            "answer": "happy",
+            "type":["phrase"]
+        },
+        {
+            "question":"Who is scared?",
+            "expression": ["angry","scared"],
+            "answer": "scared",
+            "type":["phrase"]
+        },
+        {
+            "question":"Who was not paying attention?",
+            "expression": ["distracted","happy"],
+            "answer": "distracted",
+            "type":["application"]
+        },
+        {
+            "question":"Who got a new game?",
+            "expression": ["sad","happy"],
+            "answer": "happy",
+            "type":["application"]
+        },
+        {
+            "question":"Who broke their new game?",
             "expression": ["happy","angry"],
             "answer": "angry",
-            "difficulty": "easy",
-            "type":["which"]
+            "type":["application"]
         },
         {
-            "question":"Who just heard a funny joke?",
-            "expression": ["happy","neutral"],
-            "answer": "happy",
-            "difficulty": "intermediate",
-            "type":["who"]
+            "question":"Who dropped their ice cream?",
+            "expression": ["sad","angry"],
+            "answer": "sad",
+            "type":["application"]
+        },
+        {
+            "question":"Who heard a loud bang?",
+            "expression": ["distracted","scared"],
+            "answer": "scared",
+            "type":["application"]
         }
+
     ]
 }

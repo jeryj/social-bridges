@@ -3,17 +3,11 @@
 class Assessment {
     public $current_question_number = 0,
            $answered_correctly = 0,
-           $total_questions = 3,
-           $easy_answered_correctly = 0,
-           $total_easy_questions = 2,
-           $intermediate_answered_correctly = 0,
-           $total_intermediate_questions = 1,
-           $hard_answered_correctly = 0,
-           $total_hard_questions = 0,
-           $who_answered_correctly = 0,
-           $total_who_questions = 1,
-           $which_answered_correctly = 0,
-           $total_which_questions = 2,
+           $total_questions = 10,
+           $phrase_answered_correctly = 0,
+           $total_phrase_questions = 5,
+           $application_answered_correctly = 0,
+           $total_application_questions = 5,
            $error = array(),
            $state = 'question'; // question, end
 
@@ -58,11 +52,8 @@ class Assessment {
         // set our known, submitted variables
         $this->current_question_number = $_POST['current_question_number'];
         $this->answered_correctly = $_POST['answered_correctly'];
-        $this->easy_answered_correctly = $_POST['easy_answered_correctly'];
-        $this->intermediate_answered_correctly = $_POST['intermediate_answered_correctly'];
-        $this->hard_answered_correctly = $_POST['hard_answered_correctly'];
-        $this->who_answered_correctly = $_POST['who_answered_correctly'];
-        $this->which_answered_correctly = $_POST['which_answered_correctly'];
+        $this->phrase_answered_correctly = $_POST['phrase_answered_correctly'];
+        $this->application_answered_correctly = $_POST['application_answered_correctly'];
 
         // make sure we have a submitted answer
         if(!isset($_POST['expression']) || empty($_POST['expression'])) {
@@ -78,12 +69,6 @@ class Assessment {
             // if it's right, increase the answered_correctly value by 1
             if($is_correct === true) {
                 $this->answered_correctly++;
-
-                // get question difficulty
-                $difficulty = $question->get_difficulty();
-                $difficulty_answered_correctly = $difficulty.'_answered_correctly';
-                // increase the count on the difficulty
-                $this->$difficulty_answered_correctly++;
 
                 // get question type
                 $types = $question->get_type();

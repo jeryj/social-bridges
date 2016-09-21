@@ -16,11 +16,8 @@ $assessment->get_error_messages();?>
 
     <input id="tq" type="hidden" name="total_questions" value="<?php echo $assessment->get_total_questions();?>"/>
     <input id="ac" type="hidden" name="answered_correctly" value="<?php echo $assessment->get_answered_correctly();?>"/>
-    <input id="e_ac" type="hidden" name="easy_answered_correctly" value="<?php echo $assessment->get_answered_correctly('easy');?>"/>
-    <input id="i_ac" type="hidden" name="intermediate_answered_correctly" value="<?php echo $assessment->get_answered_correctly('intermediate');?>"/>
-    <input id="h_ac" type="hidden" name="hard_answered_correctly" value="<?php echo $assessment->get_answered_correctly('hard');?>"/>
-    <input id="who_ac" type="hidden" name="who_answered_correctly" value="<?php echo $assessment->get_answered_correctly('who');?>"/>
-    <input id="which_ac" type="hidden" name="which_answered_correctly" value="<?php echo $assessment->get_answered_correctly('which');?>"/>
+    <input id="phrase_ac" type="hidden" name="phrase_answered_correctly" value="<?php echo $assessment->get_answered_correctly('phrase');?>"/>
+    <input id="application_ac" type="hidden" name="application_answered_correctly" value="<?php echo $assessment->get_answered_correctly('application');?>"/>
     <input id="q_id" type="hidden" name="current_question_number" value="<?php echo $assessment->get_current_question_number();?>"/>
 
     <?php
