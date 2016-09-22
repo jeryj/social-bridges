@@ -1,9 +1,16 @@
 var btn = document.getElementById('btn--submit');
+if(btn) {
+    // hide the submit button
+    btn.className = 'hidden';
+}
 var form = document.getElementById("assessment");
 var question = document.getElementById("question");
 var progressCqn = document.getElementById('progress__cqn');
 var progressBar = document.getElementById('progressbar');
-var totalQuestions = parseInt(document.getElementById('tq').value);
+var totalQuestions = document.getElementById('tq');
+if(totalQuestions) {
+    totalQuestions = parseInt(totalQuestions.value);
+}
 var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
@@ -28,19 +35,26 @@ request.onreadystatechange = function() {
     }
 };
 
+
+if(question) {
+    question.addEventListener('mouseup', nextQuestionMouseDownListener);
+    question.addEventListener('keydown', nextQuestionKeyDownListener);
+}
+
 function new_question(json) {
     // add a class to the question and wait
     question.className = 'q-remove';
-    setTimeout(removeQuestionClass, 500);
     // destroy the original innerHTML and replaces it with our new HTML
     question.innerHTML = questionHTML(json.question);
+    setTimeout(removeQuestionClass, 500);
+
     // move focus to the question
     question.parentElement.focus();
 }
 
 function removeQuestionClass() {
     // remove the question animation class
-    question.className = '';
+    question.className = 'q-on-deck';
 }
 
 function append_error(message) {
@@ -101,11 +115,6 @@ function currentQuestion() {
     return parseInt(document.getElementById('q_id').value) + 1;
 }
 
-// hide the submit button
-btn.className = 'hidden';
-
-question.addEventListener('mouseup', nextQuestionMouseDownListener);
-question.addEventListener('keydown', nextQuestionKeyDownListener);
 
 function nextQuestionKeyDownListener(e) {
 

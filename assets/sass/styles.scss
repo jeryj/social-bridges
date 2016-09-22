@@ -43,7 +43,7 @@ header {
     svg {
         margin: 0;
         height: 1.6em;
-        width: 90%;
+        width: 5em;
         fill: #425650;
     }
 
@@ -116,6 +116,11 @@ fieldset {
     margin: 0;
     padding: 0;
     text-align: center;
+    animation: enter .5s $quad forwards;
+}
+
+.q-on-deck {
+    opacity: 0;
 }
 
 legend {
@@ -128,10 +133,6 @@ legend {
     max-width: 100%; /* Patch for IE9-11 & Edge 12-13 */
     white-space: normal; /* IE8-11 */
     margin-bottom: 0.6em;
-}
-
-legend, label {
-    animation: enter .5s $quad forwards;
 }
 
 .face {
@@ -239,9 +240,7 @@ button,
 }
 
 .q-remove {
-    legend, label {
-        animation: exit .2s $quad forwards;
-    }
+    animation: exit .2s $quad forwards;
 }
 
 .score {
@@ -352,7 +351,7 @@ button,
 @keyframes exit {
     0% {
         transform: translate3d(0, 0, 0);
-        opacity: 1;
+        opacity: 0.5;
     }
 
     100% {

@@ -32,10 +32,6 @@
 
 </main>
 <footer></footer>
-<?php if($state === 'question') { ?>
-    <script type='text/javascript' src='dist/js/scripts.min.js'></script>
-<?php } else {?>
-    <script type='text/javascript' src='assets/js/results.js'></script>
-<?php } ?>
+<script type='text/javascript' src='dist/js/scripts.min.js'></script>
 </body>
 </html>
