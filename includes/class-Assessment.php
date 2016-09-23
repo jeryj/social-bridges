@@ -3,11 +3,11 @@
 class Assessment {
     public $current_question_number = 0,
            $answered_correctly = 0,
-           $total_questions = 10,
+           $total_questions = 8,
            $phrase_answered_correctly = 0,
-           $total_phrase_questions = 5,
+           $total_phrase_questions = 4,
            $application_answered_correctly = 0,
-           $total_application_questions = 5,
+           $total_application_questions = 4,
            $error = array(),
            $state = 'question'; // question, end
 

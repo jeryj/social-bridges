@@ -1,12 +1,6 @@
 {"question":
     [
         {
-            "question":"Who is distracted?",
-            "expression": ["distracted","happy"],
-            "answer": "distracted",
-            "type":["phrase"]
-        },
-        {
             "question":"Who is angry?",
             "expression": ["sad","angry"],
             "answer": "angry",
@@ -29,12 +23,6 @@
             "expression": ["angry","scared"],
             "answer": "scared",
             "type":["phrase"]
-        },
-        {
-            "question":"Who was not paying attention?",
-            "expression": ["distracted","happy"],
-            "answer": "distracted",
-            "type":["application"]
         },
         {
             "question":"Who got a new game?",
