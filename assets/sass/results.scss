@@ -1,0 +1,94 @@
+@import "vars.scss";
+
+.score {
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 auto 1em;
+    display: block;
+    height: 200px;
+    width: 200px;
+}
+
+.score--breakdown {
+    margin-bottom: 0;
+}
+
+.score__title {
+    font-size: 5em;
+    line-height: 1;
+    font-weight: 400;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.score__percentage {
+    font-size: 0.3em;
+    position: absolute;
+    top: 0.3em;
+    font-weight: 300;
+}
+
+.score-circle {
+    transform: rotate(-90deg);
+    margin: 0;
+}
+
+.score-circle__path,
+.score-circle__bg {
+  stroke: #ddd;
+  stroke-width: 4px;
+}
+
+.score-circle__path {
+  stroke: $green;
+}
+
+.score-circle__setOffset {
+    transition: stroke-dashoffset 1.2s $quad;
+}
+
+.score-circle__resetOffset {
+    stroke-dashoffset: 565.48;
+}
+
+@media (min-width: 32em) {
+    .results {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .result {
+        align-items: flex-end;
+        margin-bottom: 1.6em;
+    }
+}
+
+.results__section-title {
+    font-size: 1em;
+    margin-top: 2.6em;
+}
+
+.results__title {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.results__description {
+    text-align: center;
+    margin: 0;
+    font-size: 0.85em;
+}
+
+.score__fraction {
+    font-size: 16px;
+    display: block;
+}
+
+.restart-assessment {
+    margin: 2.6em 0;
+    text-align: center;
+}

@@ -9,7 +9,7 @@ class Assessment {
            $application_answered_correctly = 0,
            $total_application_questions = 4,
            $error = array(),
-           $state = 'question'; // question, end
+           $state = 'questions'; // question, end
 
     public function __construct() {
         $this->init();
@@ -84,7 +84,7 @@ class Assessment {
             if(($this->current_question_number + 1) < $this->total_questions) {
                 $this->current_question_number++;
             } else {
-                $this->state = 'end';
+                $this->state = 'results';
                 $this->current_question_number = null;
             }
         }

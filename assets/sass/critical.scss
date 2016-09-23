@@ -1,0 +1,108 @@
+@import "vars.scss";
+
+html {
+    font: 16px/1.6 Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma, sans-serif;
+    color: #313534;
+    box-sizing: border-box;
+}
+
+
+:focus {
+    @extend %focus--glow;
+}
+
+header {
+    text-align: center;
+
+    svg {
+        margin: 0;
+        height: 1.6em;
+        width: 5em;
+        fill: #425650;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+a {
+    color: $salmon;
+
+    &:hover,
+    &:focus {
+        color: darken($salmon, 10);
+    }
+}
+
+body {
+    background: $light_blue;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.2;
+    margin-bottom: 0.2em;
+}
+
+* + * {
+    margin: 0 0 1.6em;
+}
+
+/* Text meant only for screen readers */
+.sr {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+    }
+}
+
+.well {
+    padding: 1.6em 1em;
+    background: #fff;
+    box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+}
+
+.btn {
+    margin: 0 auto;
+    font-size: 1.2em;
+    padding: 0.8em 1.4em;
+    width: 100%;
+    border: none;
+    background: $salmon;
+    color: #fff;
+    border-radius: 3px;
+    border-bottom: 3px solid darken($salmon, 10);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .2s $quad;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: darken($salmon, 8);
+    }
+}

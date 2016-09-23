@@ -25,7 +25,7 @@ $assessment->get_error_messages();?>
         $question_number = $assessment->get_current_question_number();
         $question = new Question($question_number);
     ?>
-    <div id="question-well" tabindex="-1">
+    <div id="question-container" class="well" tabindex="-1">
         <fieldset id="question">
 
                 <legend><?php echo $question->get_question();?></legend>
@@ -39,5 +39,5 @@ $assessment->get_error_messages();?>
             </div>
         </fieldset>
     </div>
-    <button id="btn--submit">Submit</button>
+    <button id="btn--submit" class="btn">Submit</button>
 </form>

@@ -10,6 +10,7 @@
 
     // start the assessment
     $assessment = new Assessment();
+    $state = $assessment->get_state();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,21 +18,13 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges Assessment</title>
-    <link rel='stylesheet' href='dist/css/styles.min.css' />
+    <style><?php echo file_get_contents('dist/css/critical.min.css');?></style>
+    <link rel='stylesheet' href='dist/css/<?php echo $state;?>.min.css' />
 </head>
 <body>
 <?php include('views/header.php');?>
 <main aria-live="polite" aria-relevant="additions text" class="container">
-    <?php
-    $state = $assessment->get_state();
-    if($state === 'question') {
-        include('views/question.php');
-    } else {
-        include ('views/results.php');
-    }?>
-
-</main>
-<footer></footer>
-<script type='text/javascript' src='dist/js/scripts.min.js'></script>
+<?php include("views/$state.php");?></main>
+<script type='text/javascript' src='dist/js/<?php echo $state;?>.min.js'></script>
 </body>
 </html>
