@@ -9,7 +9,7 @@
 <body>
 <?php include('views/header.php');?>
 <style><?php echo file_get_contents('dist/css/critical.min.css');?></style>
-<main class="container center">
+<main class="container">
     <h1>Assess Social Comrehension</h1>
     <p><a class="btn" href='assessment.php'>Start Assessment</a></p>
     <!-- about the app and how to use it -->
