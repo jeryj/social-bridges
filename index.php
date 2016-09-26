@@ -21,7 +21,11 @@
 <main>
     <section class="hero">
         <div class="container">
+            <h1 class="ad__title">Autism Social Comrehension Assessment</h1>
+            <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening &amp; therapy practice tool.</p>
+
             <div id="question-container" class="well">
+
                 <figure id="question" aria-role="presentation">
                     <figcaption><span class="sr">Example question from the Social Bridges Assessment</span></figcaption>
                     <div class="question__text">Who is happy?</div>
@@ -38,8 +42,6 @@
 
                 <a class="overlay-link" href='assessment.php'></a>
             </div>
-            <h1 class="ad__title">Autism Social Comrehension Assessment</h1>
-            <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening &amp; therapy practice tool.</p>
             <p class="ad__link-container">
                 <a class="ad__link btn" href='assessment.php'>Start Assessment</a>
             </p>
@@ -49,6 +51,10 @@
     <section class="report-container">
 
         <div class="container">
+
+            <h2 class="ad__title">Detailed Results</h2>
+            <p class="ad__description">Get a full-picture of your student's in a glance.</p>
+            
             <figure class="results well">
                 <div class="result">
                     <h3 class="results__title">Phrase</h3>
@@ -73,8 +79,7 @@
                     </div>
                 </div>
             </figure>
-            <h2 class="ad__title">Detailed Results</h2>
-            <p class="ad__description">Get a full-picture of your student's in a glance.</p>
+
             <p class="ad__link-container"><a class="btn" href="assessment.php">Start Assessment</a></p>
         </div>
     </section>

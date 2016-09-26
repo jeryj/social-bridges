@@ -8,8 +8,8 @@ header {
 .hero {
     background: $light_blue;
     //#d6f7dd
-    background: linear-gradient(darken($light_blue, 6), $light_blue);
-    padding: 0 0 2.6em;
+    background: linear-gradient( #d7f3e9, darken($light_blue, 6));
+    padding: 2.6em 0 2.6em;
     border-bottom: 1px solid #ddd;
 }
 
@@ -34,6 +34,7 @@ figure {
 }
 
 #question-container {
+    position: relative;
     margin-bottom: 3.2em;
     padding: 3em 1em 0.6em;
     box-shadow: 0 6px 24px rgba(0,0,0,.15);
