@@ -1,0 +1,1 @@
+.exp input{position:absolute;z-index:9;width:20px;height:20px;margin:10px}.exp:focus .face,.exp:focus+.face,.exp:hover .face,.exp:hover+.face{border-color:#eee;cursor:default}.score{text-align:center;height:auto;width:auto}.score__title{position:static;font-size:5em;line-height:1;font-weight:400;margin:0}.score__fraction{margin-bottom:2.6em}.result{background:#fff;padding:1.6em}

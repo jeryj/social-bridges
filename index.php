@@ -9,7 +9,10 @@
     <link rel='stylesheet' href='dist/css/questions.min.css' />
     <link rel='stylesheet' href='dist/css/results.min.css' />
     <link rel='stylesheet' href='dist/css/home.min.css' />
+
+
     <!--[if lt IE 9]>
+        <link rel='stylesheet' href='dist/css/ie8.min.css' />
         <script src="dist/js/html5shiv.js"></script>
     <![endif]-->
 </head>
@@ -18,10 +21,9 @@
 <main>
     <section class="hero">
         <div class="container">
-
             <div id="question-container" class="well">
                 <figure id="question" aria-role="presentation">
-                    <figcaption><span class="sr">Example question from the Social Bridges Assessment</sr></figcaption>
+                    <figcaption><span class="sr">Example question from the Social Bridges Assessment</span></figcaption>
                     <div class="question__text">Who is happy?</div>
 
                         <label class="exp">
@@ -78,7 +80,7 @@
     </section>
 
 </main>
-<footer>
+<footer class="footer">
     <p>Social Bridges &copy; <?php echo Date('Y');?>
 </footer>
 </body>

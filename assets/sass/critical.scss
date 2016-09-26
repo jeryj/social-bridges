@@ -15,8 +15,11 @@ main {
     @extend %focus--glow;
 }
 
-header {
+.logo {
     text-align: center;
+}
+
+header {
     padding: 1em 0;
 
     svg {
@@ -115,4 +118,8 @@ h1,h2,h3,h4,h5,h6 {
         color: #fff;
         background: darken($salmon, 8);
     }
+}
+
+br {
+    margin: 0;
 }
