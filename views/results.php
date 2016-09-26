@@ -1,4 +1,3 @@
-<div class="container">
     <h1 class="results__section-title">Results</h1>
     <div class="well">
         <?php
@@ -21,9 +20,7 @@
             </svg>
         </div>
     </div>
-</div>
 
-<div class="container">
     <h2 class="results__section-title"><span class="sr">Results </span>Breakdown</h2>
     <div class="results well">
         <?php
@@ -53,6 +50,5 @@
         <?php endforeach;?>
 
     </div>
-</div>
 
 <p class="restart-assessment"><a class="btn" href="assessment.php">Restart Assessment</a></p>
