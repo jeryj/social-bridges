@@ -28,15 +28,14 @@ $assessment->get_error_messages();?>
     <div id="question-container" class="well" tabindex="-1">
         <fieldset id="question">
 
-                <legend><?php echo $question->get_question();?></legend>
+            <legend><?php echo $question->get_question();?></legend>
 
-                <?php $expressions = $question->get_expression();
-                foreach($expressions as $expression) {
-                    $expression = new Expression($expression);
-                    include('views/expression.php');
-                } ?>
+            <?php $expressions = $question->get_expression();
+            foreach($expressions as $expression) {
+                $expression = new Expression($expression);
+                include('views/expression.php');
+            } ?>
 
-            </div>
         </fieldset>
     </div>
     <button id="btn--submit" class="btn">Submit</button>

@@ -18,8 +18,11 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges Assessment</title>
-    <style><?php echo file_get_contents('dist/css/critical.min.css');?></style>
+    <style><?php include_once('dist/css/critical.min.css');?></style>
     <link rel='stylesheet' href='dist/css/<?php echo $state;?>.min.css' />
+    <!--[if lt IE 9]>
+        <script src="dist/js/html5shiv.js"></script>
+    <![endif]-->
 </head>
 <body>
 <?php include('views/header.php');?>
