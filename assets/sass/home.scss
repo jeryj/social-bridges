@@ -6,22 +6,37 @@ header {
 }
 
 .hero {
-    background: #fff;
-    background: linear-gradient( #fff, #eee );
-    margin-bottom: 2.6em;
-    padding: 1em 0 2em;
+    background: $light_blue;
+    //#d6f7dd
+    background: linear-gradient(darken($light_blue, 6), $light_blue);
+    padding: 0 0 2.6em;
     border-bottom: 1px solid #ddd;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 .ad__title {
-    font-size: 2em;
+    font-size: 2.4em;
     text-align: center;
-    margin: 1em 0;
+    margin: 0 0 0.2em;
+}
+
+.ad__description {
+    text-align: center;
+}
+
+
+.ad__link-container {
+    text-align: center;
 }
 
 #question-container {
-    position: relative;
-    z-index: 2;
+    margin-bottom: 3.2em;
+    padding: 3em 1em 0.6em;
+    box-shadow: 0 6px 24px rgba(0,0,0,.15);
 }
 
 .overlay-link {
@@ -32,22 +47,31 @@ header {
     right: 0;
     left: 0;
     margin: auto;
-    background: linear-gradient(transparent, #fff );
-}
-
-.assessment-link__container {
-    position: absolute;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    background: linear-gradient(transparent, #fff );
-    padding: 3em 0 4em;
-    text-align: center;
 }
 
 .report-container {
-
     background: $light_blue;
+    background: linear-gradient( #fcfffe, $light_blue );
+    padding: 2.6em 0;
+    margin: 0;
+}
+
+.results {
+    box-shadow: 0 6px 24px rgba(0,0,0,.15);
+    margin-bottom: 3.2em;
+}
+
+.question__text {
+    width: 100%;
+    display: block;
+}
+
+
+footer {
+    background: $dark_blue;
+    padding: 0.8em;
+    margin: 0;
+    text-align: center;
+    color: #ddd;
+    font-size: 0.9em;
 }

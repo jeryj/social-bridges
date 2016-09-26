@@ -3,9 +3,13 @@
 html {
     font: 16px/1.6 Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma, sans-serif;
     color: #313534;
+    background: darken($light_blue, 6);
     box-sizing: border-box;
 }
 
+main {
+    margin: 0;
+}
 
 :focus {
     @extend %focus--glow;
@@ -13,7 +17,6 @@ html {
 
 header {
     text-align: center;
-    background: $light_blue;
     padding: 1em 0;
 
     svg {
@@ -38,8 +41,9 @@ a {
 }
 
 body {
-    background: $light_blue;
     margin: 0 auto;
+    background: linear-gradient($light_blue, darken($light_blue, 6));
+
 }
 
 h1,h2,h3,h4,h5,h6 {
