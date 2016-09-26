@@ -43,7 +43,6 @@ nextQuestionKeyDownListener = function(e) {
 
     // keypress on enter!
     if (!x && !y) {
-        console.log(e.keyCode);
         // keypress, so let's check the code
         if(e.keyCode === 13) {
             // check if this input has a selected state
@@ -167,10 +166,10 @@ function expressionHTML(expression) {
     return '<label class="exp"><input class="exp_input" type="radio" name="expression" value="'+expression.name+'" /><img class="face" src="dist/img/'+expression.image+'" alt="" /><span class="sr">'+expression.description+'</span></label>';
 }
 
+// loads an image into the cache
 function preLoadImage(name) {
     var my_image = new Image();
     my_image.src = 'dist/img/'+name+'.jpg';
-    my_image.onload = console.log('image loaded: '+name);
 }
 
 // after everything is loaded, load our upcoming images into the cache
