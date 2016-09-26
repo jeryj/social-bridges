@@ -154,6 +154,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
 });
 
+// after everything is loaded, load our upcoming images into the cache
+window.onload = function() {
+    // load all the expressions (would do this dynamically, but I'm running out of my 10k limit!)
+    var expressions = ['happy', 'sad', 'scared', 'angry', 'distracted'];
+    for(var e = 0; e < expressions.length; e++) {
+        preLoadImage(expressions[e]);
+    }
+};
+
+function preLoadImage(name) {
+    var my_image = new Image();
+    my_image.src = 'dist/img/'+name+'.jpg';
+    my_image.onload = console.log('image loaded: '+name);
+}
+
 // return current question number
 function currentQuestion() {
     return parseInt(document.getElementById('q_id').value) + 1;
