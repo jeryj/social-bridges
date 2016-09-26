@@ -21,7 +21,7 @@
 <main>
     <section class="hero">
         <div class="container">
-            <h1 class="ad__title">Autism Social Comrehension Assessment</h1>
+            <h1 class="ad__title">Autism Social Comprehension Assessment</h1>
             <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening &amp; therapy practice tool.</p>
 
             <div id="question-container" class="well">
@@ -53,23 +53,12 @@
         <div class="container">
 
             <h2 class="ad__title">Detailed Results</h2>
-            <p class="ad__description">Get a full-picture of your student's in a glance.</p>
-            
+            <p class="ad__description">Get a full-picture of your student's assessment in a glance.</p>
+
             <figure class="results well">
                 <div class="result">
                     <h3 class="results__title">Phrase</h3>
                     <p class="results__description">"Who is..." type questions</p>
-                    <div class="score score--breakdown">
-                        <p class="score__title">100<span class="score__percentage">%</span><span class="score__fraction">4 of 4<span class="sr"> Correct</span></span></p>
-                        <svg class="score-circle" width="200" height="200" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                          <circle class="score-circle__bg" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
-                          <circle class="score-circle__path score-circle__setOffset" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
-                        </svg>
-                    </div>
-                </div>
-                <div class="result">
-                    <h3 class="results__title">Application</h3>
-                    <p class="results__description">Scenario type questions.</p>
                     <div class="score score--breakdown">
                         <p class="score__title">75<span class="score__percentage">%</span><span class="score__fraction">3 of 4<span class="sr"> Correct</span></span></p>
                         <svg class="score-circle" width="200" height="200" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -77,6 +66,18 @@
                           <circle class="score-circle__path score-circle__setOffset" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="141.371669412"></circle>
                         </svg>
                     </div>
+                </div>
+                <div class="result">
+                    <h3 class="results__title">Application</h3>
+                    <p class="results__description">Scenario type questions.</p>
+                    <div class="score score--breakdown">
+                        <p class="score__title">50<span class="score__percentage">%</span><span class="score__fraction">2 of 4<span class="sr"> Correct</span></span></p>
+                        <svg class="score-circle" width="200" height="200" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="score-circle__bg" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+                          <circle class="score-circle__path score-circle__setOffset" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="282.743338823"></circle>
+                        </svg>
+                    </div>
+
                 </div>
             </figure>
 

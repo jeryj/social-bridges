@@ -7,9 +7,9 @@ header {
 
 .hero {
     background: $light_blue;
-    //#d6f7dd
-    background: linear-gradient( #d7f3e9, darken($light_blue, 6));
+    background: linear-gradient( $light_blue, darken($light_blue, 6));
     padding: 2.6em 0 2.6em;
+    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
 
