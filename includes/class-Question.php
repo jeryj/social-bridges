@@ -7,7 +7,7 @@ class Question {
            $type = array();
 
     public function __construct($question_number) {
-        if(0 <= (int) $question_number && (int) $question_number <= 10) {
+        if(0 <= (int) $question_number && (int) $question_number <= 8) {
             $this->set_question($question_number);
         } else {
             return 'Error: Question number does not exist';

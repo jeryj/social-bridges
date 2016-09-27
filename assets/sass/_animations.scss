@@ -1,0 +1,35 @@
+@keyframes enter {
+    0% {
+        transform: translate3d(200px, 0, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes enterBottom {
+    0% {
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes exit {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate3d(-200px, 0, 0);
+        opacity: 0;
+    }
+}

@@ -1,3 +1,23 @@
+<?php
+// STARTUP
+// display errors
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+// a little function to set the right buttons for people to use to start/restart an assessment
+require_once('config.php');
+require_once('includes/class-Assessment.php');
+if(isset($_COOKIE['state']) && $_COOKIE['state'] === 'results') {
+    // just offer a Resume Assessment
+    $assessment_btn_text = 'Resume Asessement';
+}
+// check if we're on the first question or not
+elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
+    $assessment_btn_text = $assessment->restart_assessment_btn('Resume Asessement', 'assessment.php');
+} else {
+    $assessment_btn_text = 'Start Assessment';
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,9 +62,7 @@
 
                 <a class="overlay-link" href='assessment.php'></a>
             </div>
-            <p class="ad__link-container">
-                <a class="ad__link btn" href='assessment.php'>Start Assessment</a>
-            </p>
+            <p class="ad__link-container"><a class="btn" href="assessment.php">Resume Assessment</a></p>
         </div>
     </section>
 
@@ -81,7 +99,7 @@
                 </div>
             </figure>
 
-            <p class="ad__link-container"><a class="btn" href="assessment.php">Start Assessment</a></p>
+            <p class="ad__link-container"><a class="btn" href="assessment.php"><?php echo $assessment_btn_text;?></a></p>
         </div>
     </section>
 

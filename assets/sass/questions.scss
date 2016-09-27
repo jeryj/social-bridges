@@ -1,4 +1,5 @@
 @import "vars.scss";
+@import "animations.scss";
 
 form {
     position: relative;
@@ -133,28 +134,4 @@ button {
 
 .q-remove {
     animation: exit .2s $quad forwards;
-}
-
-@keyframes enter {
-    0% {
-        transform: translate3d(200px, 0, 0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes exit {
-    0% {
-        transform: translate3d(0, 0, 0);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: translate3d(-200px, 0, 0);
-        opacity: 0;
-    }
 }
