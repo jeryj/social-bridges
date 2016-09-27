@@ -22,7 +22,7 @@
     <section class="hero">
         <div class="container">
             <h1 class="ad__title">Autism Social Comprehension Assessment</h1>
-            <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening &amp; therapy practice tool.</p>
+            <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening and therapy practice tool for emotional recognition and pragmatic awareness.</p>
 
             <div id="question-container" class="well">
 
@@ -53,7 +53,7 @@
         <div class="container">
 
             <h2 class="ad__title">Detailed Results</h2>
-            <p class="ad__description">Get a full-picture of your student's assessment in a glance.</p>
+            <p class="ad__description">Get a full-picture of your student's assessment in a glance, so you always know what to work on next.</p>
 
             <figure class="results well">
                 <div class="result">

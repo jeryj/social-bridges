@@ -2,10 +2,14 @@
 
 form {
     position: relative;
+    margin: 0 auto;
+    max-width: 28em;
 }
 
 #question-container {
     margin-top: 0.6em;
+    max-width: 28em;
+    margin: 0 auto 1.6em;
     padding: 3em 1em 0;
     min-height: 260px;
     background: #fff;
