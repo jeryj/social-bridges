@@ -13,7 +13,7 @@ if(isset($_COOKIE['state']) && $_COOKIE['state'] === 'results') {
 }
 // check if we're on the first question or not
 elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
-    $assessment_btn_text = $assessment->restart_assessment_btn('Resume Asessement', 'assessment.php');
+    $assessment_btn_text = $assessment_btn_text = 'Resume Asessement';
 } else {
     $assessment_btn_text = 'Start Assessment';
 }
@@ -62,7 +62,7 @@ elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
 
                 <a class="overlay-link" href='assessment.php'></a>
             </div>
-            <p class="ad__link-container"><a class="btn" href="assessment.php">Resume Assessment</a></p>
+            <p class="ad__link-container"><a class="btn" href="assessment.php"><?php echo $assessment_btn_text;?></a></p>
         </div>
     </section>
 
