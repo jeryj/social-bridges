@@ -56,7 +56,7 @@ elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
                         </label>
                         <label class="exp">
                             <img class="face" src="dist/img/distracted.jpg" alt="" />
-                            <span class="sr">Face with slanted eyebrows and small eyes. Flared nostrils with mouth open wide as if screaming, showing teeth.</span>
+                            <span class="sr">Face with eyes open normally, staring straight ahead. Mouth straight and facial muscles relaxed. </span>
                         </label>
                 </figure>
 
