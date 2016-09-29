@@ -1,9 +1,4 @@
 <?php
-// STARTUP
-// display errors
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 // a little function to set the right buttons for people to use to start/restart an assessment
 require_once('config.php');
 require_once('includes/class-Assessment.php');
@@ -41,8 +36,8 @@ elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
 <main>
     <section class="hero">
         <div class="container">
-            <h1 class="ad__title">Autism Social Comprehension Assessment</h1>
-            <p class="ad__description">Used by Speech-Language Pathologists as a pre-screening and therapy practice tool for emotional recognition and pragmatic awareness.</p>
+            <h1 class="ad__title">Test Social Comprehension</h1>
+            <p class="ad__description">Used by Speech Language Pathologists as a therapy practice tool for emotional recognition and pragmatic awareness.</p>
 
             <div id="question-container" class="well">
 
