@@ -1,0 +1,21 @@
+Social Bridges
+---------------
+
+Social Bridges is an idea from a Speech Language Pathologist that I brought to life for the [10k Apart contest](http://a-k-apart.com/). The questions were written by a certified SLP and the facial expressions were vetted as well.
+
+
+### So, what about the technical stuff?
+
+
+### Progressive Enhancement
+Social Bridges is keyboard and screen reader accessible, works with or without Javascript, cookies, or even CSS (though it's a lot nicer with CSS!), and has been tested to work with browsers all the way back to IE 8.
+
+Although the web app works well as a base, I did add a few things to make the experience better:
+
+- JS: AJAX for moving through questions
+- JS: Pre-load upcoming images into the cache
+- JS: Click on a facial expression to submit answer
+- JS: Hidden submit button (visible if you tab to it)
+- Cookies to retain question, score, and assessment state
+- Animations for modern browsers
+- SVG for modern browsers
