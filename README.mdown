@@ -1,10 +1,9 @@
 Social Bridges
 ---------------
 
-Social Bridges is an idea from a Speech Language Pathologist that I brought to life for the [10k Apart contest](http://a-k-apart.com/). The questions were written by a certified SLP and the facial expressions were vetted as well.
+Social Bridges is a tool for Speech Language Pathologists to use in therapy with people who have difficulty interpreting or explaining facial expressions or understanding social situations. The questions were written by a certified SLP who works with high school students.
 
-
-### So, what about the technical stuff?
+Social Bridges has been successfully used in therapy sessions with students identified as Autism Spectrum Disorder, low IQ, and/or Down syndrome.
 
 
 ### Progressive Enhancement
