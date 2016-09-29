@@ -18,3 +18,13 @@ Although the web app works well as a base, I did add a few things to make the ex
 - Cookies to retain question, score, and assessment state
 - Animations for modern browsers
 - SVG for modern browsers
+
+
+### Local Set-up
+Social Bridges uses Gulp, so run `npm install` after downloading the files to install all the necessary modules. After the install is finished (successfully, hopefully!), run `gulp` to compile all images, sass, and js files into the `/dist` directory.
+
+### Contributing
+
+When making changes to the SASS/JS/IMGs, be sure to work from the `/assets` directory.
+
+To add new expressions or questions, work from the `/data/` directory JSON files and follow the same format as the other expressions and questions.

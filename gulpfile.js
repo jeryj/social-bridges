@@ -10,9 +10,9 @@ const imagemin = require('gulp-imagemin');
 gulp.task('serve', ['sass', 'js', 'compressImg'], function() {
 
     // build on change
-    gulp.watch('../assets/sass/*.{scss,sass}', ['sass']);
+    gulp.watch('assets/sass/*.{scss,sass}', ['sass']);
     // compress on change
-    gulp.watch('../assets/js/*.js', ['js']);
+    gulp.watch('assets/js/*.js', ['js']);
 });
 
 gulp.task('sass', function () {
@@ -28,9 +28,9 @@ gulp.task('js', function() {
 });
 
 function compressJS(filename) {
-    rootPath = "../assets/js/";
-    src = "../assets/js/"+filename+".js";
-    dist = '../dist/js/';
+    rootPath = "assets/js/";
+    src = "assets/js/"+filename+".js";
+    dist = 'dist/js/';
 
     return gulp.src(src)
         .pipe(uglify())
@@ -41,14 +41,14 @@ function compressJS(filename) {
 }
 
 gulp.task('compressImg', function() {
-    return gulp.src('../assets/img/*')
+    return gulp.src('assets/img/*')
             .pipe(imagemin())
-            .pipe(gulp.dest('../dist/img'));
+            .pipe(gulp.dest('dist/img'));
 });
 
 
 function processSASS(filename) {
-    return gulp.src('../assets/sass/'+filename+'.{scss,sass}')
+    return gulp.src('assets/sass/'+filename+'.{scss,sass}')
       // Converts Sass into CSS with Gulp Sass
       .pipe(sass({
         errLogToConsole: true
@@ -64,7 +64,7 @@ function processSASS(filename) {
         suffix: '.min'
       }))
       // Outputs CSS files in the css folder
-      .pipe(gulp.dest('../dist/css/'));
+      .pipe(gulp.dest('dist/css/'));
 }
 
 // Creating a default task

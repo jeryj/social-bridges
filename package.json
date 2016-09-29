@@ -1,7 +1,7 @@
 {
   "name": "social-bridges",
-  "version": "1.0",
-  "description": "Autism screening assessment and practice web app.",
+  "version": "1.0.0",
+  "description": "A tool for Speech Language Pathologists to use as a therapy practice tool for emotional recognition and pragmatic awareness.",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-autoprefixer": "^2.1.0",
@@ -19,5 +19,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "juryjowns",
-  "license": "ask"
+  "license": "GPL-3.0"
 }
