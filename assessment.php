@@ -1,5 +1,4 @@
 <?php
-
     header('Content-type: text/html; charset=utf-8');
     require_once('config.php');
     require_once('includes/class-Assessment.php');
@@ -16,8 +15,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges Assessment</title>
     <style><?php include_once('dist/css/critical.min.css');?></style>
-    <link rel='stylesheet' href='dist/css/<?php echo $state;?>.min.css' />
-
+    <link rel='stylesheet' href='dist/css/<?php echo $state;?>.min.css'/>
     <!--[if lt IE 9]>
         <link rel='stylesheet' href='dist/css/ie8.min.css' />
         <script src="dist/js/html5shiv.js"></script>
@@ -30,7 +28,6 @@
         <?php include("views/$state.php");?>
     </div>
 </main>
-
 <script>
 if( window.FormData !== undefined) {
     document.addEventListener("DOMContentLoaded", function(event) {
