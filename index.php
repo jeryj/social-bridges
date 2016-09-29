@@ -19,9 +19,6 @@ elseif(isset($_COOKIE['cqn']) && $_COOKIE['cqn'] != 0) {
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Social Bridges</title>
-    <style><?php include_once('dist/css/critical.min.css');?></style>
-    <link rel='stylesheet' href='dist/css/questions.min.css'/>
-    <link rel='stylesheet' href='dist/css/results.min.css'/>
     <link rel='stylesheet' href='dist/css/home.min.css'/>
 
     <!--[if lt IE 9]>
